@@ -1,15 +1,18 @@
 body{
-    background-color: rgba(255, 255, 255, 0.872);
+    // background-color: rgba(255, 255, 255, 0.872);
+    background: radial-gradient(beige,rgb(238, 222, 250)) ;
 
     #main_title{
-        padding-top: 50vh;
-        text-align: center;
-        font-size: 3rem;
+        padding-top: 40vh;
         background-image: url(../resources/portada.PNG);
         background-size: cover;
         background-position: center;
         height: 100vh;
         width: 100vw;
+
+        img{
+            max-width: 20rem;
+        }
     }
 
     .wrapper{
@@ -17,7 +20,7 @@ body{
 
         nav{
             .navbrand_img{
-                max-width: 100px;
+                max-width: 125px;
             }
 
             #offcanvasNavbar{
@@ -35,23 +38,67 @@ body{
             #navbar_icon{
                 border-radius: 0;
             }
+        }
 
-            #navbar{
-                border-radius: 0;
-                
-            }
+        .carousel-background::after{
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: #000;
+            opacity: 0.5;
+        }
+
+        .carousel-caption{
+            font-size: 1.25rem;
+            font-weight: 600;
+            z-index: 9998;
         }
 
         .works_imgs{
             max-width: 20em;
+            cursor: pointer;
+        }
+
+        .container-img{
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(0,0,0,0.8);
+            display: flex ;
+            justify-content: center;
+            align-items: center;
+
+            svg{
+                position: absolute;
+                color: white;
+                top: 20vh;
+                right: 5vw;
+                cursor: pointer;
+            }
+        }
+
+        .img-show{
+            max-height: 50vw;
+            display: block;
+            object-fit: cover;
         }
     }
 
     footer{
-        margin-top: 150px;
+        margin-top: 100px;
         padding: 30px 0px;
         background-color: rgb(44, 44, 44);
         color: white;
+
+        img{
+            max-width: 200px;
+        }
     }
 }
 
